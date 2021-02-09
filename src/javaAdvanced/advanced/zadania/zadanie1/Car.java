@@ -45,7 +45,7 @@ public class Car {
             return false;
         }
         Car anotherCar = (Car) anotherObject;
-        return (this.brand == anotherCar.brand && this.colour == anotherCar.colour && this.productionYear == anotherCar.productionYear);
+        return (this.brand.equals(anotherCar.brand) && this.colour.equals(anotherCar.colour) && this.productionYear == anotherCar.productionYear);
 
     }
 }
