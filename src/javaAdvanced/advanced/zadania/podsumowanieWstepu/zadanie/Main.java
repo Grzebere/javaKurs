@@ -12,7 +12,7 @@ public class Main {
 
         Czasopismo czasopismo = new Czasopismo("Apple", author1);
 
-        Biblioteka biblioteka = new Biblioteka(10, książka1, książka2, czasopismo);
+        Biblioteka biblioteka = new Biblioteka( książka1, książka2, czasopismo);
 
         System.out.println(biblioteka.authorWithTheMostCopy());
         System.out.println(biblioteka.searchByAuthor("Boris"));

@@ -3,26 +3,12 @@ package javaAdvanced.advanced.zadania.podsumowanieWstepu.zadanie;
 public class Biblioteka {
     int LibrarySize;
     Egzemplarz[] egzemplarze;
-    ;
-    int spot = 0;
 
-    public void addToLibrary(Egzemplarz egzemplarz) {
-        if (spot < egzemplarze.length) {
-            egzemplarze[spot] = egzemplarz;
-            spot++;
-        }
 
-    }
 
-    public Biblioteka(int librarySize, Egzemplarz... egzemplarze) {
-        this.LibrarySize = librarySize;
-        this.egzemplarze = new Egzemplarz[librarySize];
-        for ( int i = 0; i < egzemplarze.length; i++ ) {
-            if (spot < this.egzemplarze.length) {
-                this.egzemplarze[spot] = egzemplarze[i];
-                spot++;
-            }
-        }
+    public Biblioteka(Egzemplarz... egzemplarze) {
+        this.LibrarySize = egzemplarze.length;
+        this.egzemplarze = egzemplarze;
     }
 
     public Egzemplarz[] searchByTitle(String title) {
@@ -97,9 +83,7 @@ public class Biblioteka {
         int count = 0;
         for ( int i = 0; i < egzemplarze.length; i++ ) {
             for ( int j = i + 1; j < egzemplarze.length; j++ ) {
-                if(egzemplarze[i]== null || egzemplarze[j] == null){
-                    break;
-                } else if (egzemplarze[i].getAutor().equals(egzemplarze[j].getAutor())) {
+                if (egzemplarze[i].getAutor().equals(egzemplarze[j].getAutor())) {
                     count++;
                 }
             }
