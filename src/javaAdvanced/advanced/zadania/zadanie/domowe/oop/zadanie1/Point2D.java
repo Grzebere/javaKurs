@@ -8,35 +8,35 @@ public class Point2D {
         setY(0);
     }
 
-    protected Point2D(float x, float y) {
+    public Point2D(float x, float y) {
         setX(x);
         setY(y);
     }
 
-    protected float getX() {
+    public float getX() {
         return x;
     }
 
-    protected void setX(float x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    protected float getY() {
+    public float getY() {
         return y;
     }
 
-    protected void setY(float y) {
+    public void setY(float y) {
         this.y = y;
     }
 
-    protected float[] getXY() {
+    public float[] getXY() {
         float xy[] = new float[2];
         xy[0] = this.x;
         xy[1] = this.y;
         return xy;
     }
 
-    protected void setXY(float x, float y) {
+    public void setXY(float x, float y) {
         setX(x);
         setY(y);
     }

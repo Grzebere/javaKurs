@@ -4,20 +4,20 @@ public class Point3D extends Point2D {
     protected float z;
 
 
-    protected Point3D(float x, float y, float z) {
+    public Point3D(float x, float y, float z) {
         super(x, y);
         setZ(z);
     }
 
-    protected float getZ() {
+    public float getZ() {
         return z;
     }
 
-    protected void setZ(float z) {
+    public void setZ(float z) {
         this.z = z;
     }
 
-    protected float[] getXYZ() {
+    public float[] getXYZ() {
         float xyz[] = new float[3];
         xyz[0] = this.x;
         xyz[1] = this.y;
@@ -25,7 +25,7 @@ public class Point3D extends Point2D {
         return xyz;
     }
 
-    protected void setXYZ(float x, float y, float z){
+    public void setXYZ(float x, float y, float z){
         setX(x);
         setY(y);
         setZ(z);
